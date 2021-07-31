@@ -1,3 +1,13 @@
-const test = $(".story-box");
+const header = $(".header-box");
 
-$(test).text("Hey there!");
+$(header).text("Test Header");
+
+const post = $(".post");
+
+const mainList = [];
+
+
+
+
+
+
