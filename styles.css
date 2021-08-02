@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #a1c181;
+    background-color: #a1c18148;
     border-radius: 1%;
 }
 
@@ -48,7 +48,7 @@ body {
     height: 100%;
     width: 100px;
     /* border-right: 1px solid rgb(0, 255, 42); */
-        background-color: #233d4dcf;
+        background-color: #233d4d80;
 }
 
 .ST_CO-panel {
@@ -60,7 +60,7 @@ body {
     height: 64px;
     width: 100%;
     /* border-bottom: solid 1px #eb5e28; */
-    background-color: #fccb46af;
+    background-color: #fccb4680;
 
 }
 
@@ -68,7 +68,7 @@ body {
     height: 16px;
     width: 100%;
     /* border-top: solid 1px rgb(47, 255, 0); */
-            background-color: #fe812daf;
+            background-color: #fe812d80;
 }
 
 .main-list {
