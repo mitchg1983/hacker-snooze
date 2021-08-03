@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #a1c18148;
+    background-color: #a7e8ea92;
     border-radius: 1%;
 }
 
@@ -22,14 +22,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    font-size: x-large;
+    font-style: italic;
 }
 
 .header-box {
-    height: 25px;
+    height: 45px;
     width: 400px;
-    border: solid 1px rgb(179, 0, 255);
-    
+    /* border: solid 1px rgb(179, 0, 255); */
+    background-color: rgba(128, 0, 128, 0.517);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .story-box {
@@ -74,7 +81,7 @@ body {
 
 .comments-panel {
     height: 26px;
-    max-width: 100%;
+    width: 98%;
     background-color: #fe812d80;
     display: flex;
     align-items: center;

@@ -2,7 +2,7 @@
 
 const header = $(".header-box");
 
-$(header).text("Test Header");
+$(header).text("News for Nerds");
 
 const storyBox = $(".story-box");
 
