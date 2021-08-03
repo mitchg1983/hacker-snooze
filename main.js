@@ -11,7 +11,7 @@ const post = $(".post");
 let bestStories = [];
 
 //fetch the bets stories on hackernews, should return an array
-fetch("https://hacker-news.firebaseio.com/v0/beststories.json?print=pretty")
+fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
   // Run the following after receiving a response from the API
   .then(function (rawData) {
     return rawData.json();
@@ -53,7 +53,7 @@ function populateMainList(storyId) {
 function makePost(data) {
   if (data.type === "story") {
     //This div houses all the elements of the post
-    const newPost = $('<div class="post">');
+    const newPost = $('<li class="post">');
 
     //Assign this post a uniqe id
     $(newPost).attr("id", data.id);
@@ -67,12 +67,17 @@ function makePost(data) {
     //Get the score of the story
     const storyScore = data.score;
 
+
     //Display that score to the user
-    $(storyInfoPanel).text(storyScore + " points");
+    $(storyInfoPanel).html(storyScore + "points" + " <br/> " + "(click to hide)");
 
     $(storyInfoPanel).on("click", function () {
 
       $(newPost).addClass("hide-me");
+
+      setTimeout(function () {
+        $(newPost).addClass("hide-me-forever")
+      }, 400);
 
     });
 
@@ -105,6 +110,7 @@ function makePost(data) {
     //Why do some of these use camelCase? Should be consistent.
     $(storyPanel).mouseover(function (){
 
+      $(storyPanel).removeClass("hover-away");
       $(storyPanel).addClass("hover-big");
 
     })
@@ -112,6 +118,7 @@ function makePost(data) {
     $(storyPanel).mouseout(function (){
 
       $(storyPanel).removeClass("hover-big");
+      $(storyPanel).addClass("hover-away");
 
     })
 
@@ -170,6 +177,7 @@ function makePost(data) {
 
     $(commentsPanel).mouseover(function (){
 
+      $(commentsPanel).removeClass("comment-hover-away");
       $(commentsPanel).addClass("comment-hover");
 
     })
@@ -177,6 +185,8 @@ function makePost(data) {
     $(commentsPanel).mouseout(function (){
 
       $(commentsPanel).removeClass("comment-hover");
+      $(commentsPanel).addClass("comment-hover-away");
+
 
     })
 

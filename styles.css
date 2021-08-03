@@ -55,19 +55,21 @@ body {
 .ST_CO-panel {
     height: 100%;
     width: 98%;
+    word-wrap: normal;
+
 }
 
 .story-panel {
     height: 54px;
-    max-width: 100%;
+    width: 98%;
     background-color: #fccb4680;
     display: flex;
     align-items: center;
     justify-content: left;
     padding-left: 1vw;
-    word-wrap: break-word;
+    word-wrap: normal;
     border-top-right-radius: 15px;
-
+    
 }
 
 .comments-panel {
@@ -97,33 +99,51 @@ body {
 }
 
 .hover-big {
-    transition: background-color 300ms;
+    transition: background-color 500ms;
     background-color: #fccb46;
     transition:  300ms;
+}
 
-
+.hover-away {
+    transition: background-color 500ms;
+    background-color: #fccb4680;
+    transition:  300ms;
 }
 
 .comment-hover {
-    transition: background-color 300ms;
+    transition: background-color 500ms;
     background-color: #fe812dcf;
     transition:  300ms;
 }
 
-.hide-me {
-    visibility: collapse;
+.comment-hover-away {
+    transition: background-color 500ms;
+    background-color: #fe812d80;
+    transition:  300ms;
 }
 
+.hide-me {
+    transition: height 400ms, opacity 200ms;
+    height: 0px;
+    opacity: 0%;
+}
 
+.hide-me-forever {
+    display: none;
+}
 
 @media screen and (max-width: 800px) {
+    
+    body {
+        font-size: x-large;
+    }
+    
+    .app {
+        width: 100vw;
+    }
 
-body {
-    font-size: x-large;
-}
-
-.app {
-    width: 100vw;
-}
-
+    .story {
+        min-width: 300px;
+    }
+    
 }
