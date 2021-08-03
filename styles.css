@@ -19,9 +19,6 @@ body {
 .header {
     min-height: 75px;
     width: 100%;
-    /* border-top: solid blue 1px;
-    border-right: solid blue 1px;
-    border-left: solid blue 1px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,8 +34,7 @@ body {
 
 .story-box {
     height: 90vh;
-    width: 80vw;
-    /* border: solid black 1px; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -47,41 +43,87 @@ body {
 .info-panel {
     height: 100%;
     width: 100px;
-    /* border-right: 1px solid rgb(0, 255, 42); */
-        background-color: #233d4d80;
+    background-color: #36566a6a;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 1vw;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .ST_CO-panel {
     height: 100%;
-    width: 100%;
+    width: 98%;
 }
 
 .story-panel {
-    height: 64px;
-    width: 100%;
-    /* border-bottom: solid 1px #eb5e28; */
+    height: 54px;
+    max-width: 100%;
     background-color: #fccb4680;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 1vw;
+    word-wrap: break-word;
+    border-top-right-radius: 15px;
 
 }
 
 .comments-panel {
-    height: 16px;
-    width: 100%;
-    /* border-top: solid 1px rgb(47, 255, 0); */
-            background-color: #fe812d80;
-}
-
-.main-list {
-    
+    height: 26px;
+    max-width: 100%;
+    background-color: #fe812d80;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 1vw;
+    border-bottom-right-radius: 15px;
 }
 
 .post {
     height: 80px;
-    /* border: solid 1px magenta; */
     min-width: max-content;
     display: flex;
     flex-direction: row;
     margin-bottom: 4px;
     margin-left: 4px;
     margin-right: 4px;
+    box-sizing: border-box;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.hover-big {
+    transition: background-color 300ms;
+    background-color: #fccb46;
+    transition:  300ms;
+
+
+}
+
+.comment-hover {
+    transition: background-color 300ms;
+    background-color: #fe812dcf;
+    transition:  300ms;
+}
+
+.hide-me {
+    visibility: collapse;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+body {
+    font-size: x-large;
+}
+
+.app {
+    width: 100vw;
+}
+
 }
